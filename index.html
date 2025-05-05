@@ -1,223 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Sharwari Dali</title>
-  <meta content="My Portfolio" name="description">
-  <meta content="design, research, artificial intelligence, cybersecurity, penetration testing, redteam, purpleteam" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharwari Dali | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="flair.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  d-flex justify-content-center align-items-center header-transparent">
-    <nav class="nav-menu d-none d-lg-block">
-      <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-     <!--   <li><a href="#portfolio">Portfolio</a></li> -->
-        <li><a href="#footer">Contact</a></li>
-
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary px-3">
+    <a class="navbar-brand fw-bold purple-text font-great-vibes fs-3" href="#">Sharwari Dali</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item d-flex align-items-center ms-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="themeToggle">
+            <label class="form-check-label" for="themeToggle">Light Mode</label>
+          </div>
+        </li>
       </ul>
-    </nav><!-- .nav-menu -->
-  </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <h1>Sharwari Dali</h1>
-      <h2>Cybersecurity Professional</h2>
-      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
     </div>
-  </section><!-- End Hero -->
+  </nav>
+<!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="assets/profile.jpg" alt="Sharwari Dali">
+    <h1 class="purple-text">Hi, I'm Sharwari Dali</h1>
+    <figure class="text-center mt-4">
+        <blockquote class="blockquote mb-1">
+          <p class="font-great-vibes fs-3 mb-0">
+            “ With great power comes great responsibility.”
+          </p>
+          <figcaption class="blockquote-footer small mt-1">
+            Marvel
+          </figcaption>
+        </blockquote>
+      
+        <p class="lead mt-4 px-3">
+          To me, cybersecurity isn't just a profession — it's a commitment.  <br>
+          With the power to protect systems and data comes the responsibility to act with vigilance, integrity, and foresight.
+        </p>
+      </figure>
+      
+  </section>
 
-  <main id="main">
-
-    <!-- ======= About Me Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <span>About Me</span>
-          <h2>About Me</h2>
-          <p>Pursuing Masters in Cyber Security at Cardiff University</p>
+<!-- Projects Section -->
+<section class="container py-5" id="projects">
+    <h2 class="text-center mb-4 purple-text">Projects</h2>
+  
+    <!-- Special Highlighted Projects -->
+<div class="row mb-5">
+    <!-- QR Code Dissertation -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-lg bg-gradient p-3 h-100">
+        <div class="card-body">
+          <h5 class="card-title">
+            <span class="badge bg-purple me-2">Dissertation</span> QR Code Security Research
+          </h5>
+          <p class="card-text">
+            A comprehensive dissertation on the vulnerabilities in QR code technology, attack vectors, and mitigation strategies — combining deep research with real-world testing.
+          </p>
+          <a href="https://github.com/sharwaridali/qrcode-generator" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark">
+            View Project
+          </a>
         </div>
-
-        <div class="row">
-          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-          <div class="col-lg-8 d-flex flex-column align-items-stretch">
-            <div class="content pl-lg-4 d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="icofont-rounded-right"></i> <strong>Name:</strong> Sharwari S. Dali</li>
-                    <li><i class="icofont-rounded-right"></i> <strong>Located:</strong> Cardiff, Wales, UK</li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Computer Science Engineering and Cybersecurity</li>
-                    <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> sharwaridali26@gmail.com</li>
-                  </ul>
-                </div>
-                <p>Cybersecurity</p>
-                <p>As I embark on this exciting journey in cybersecurity, I am enthusiastic about the 
-                  opportunities that lie ahead to enhance my skills, tackle complex security challenges, and play a pivotal role in fortifying
-                  organizations against cyber threats.</p>
-              </div>
-        </div>
-          </div>
-      </div>
-    </section><!-- End About Me Section -->
-    <!-- Resume -->
-    <section id="resume" class="resume">
-      <div class="container">
-        <div class="section-title">
-          <span>My Resume</span>
-          <h2>My Resume</h2>
-        </div>
-        <div class="text-center">
-      <a href="resume.html" target="_blank"><button type="button" class="btn" style="background: #a503fc; color: #fff">My Resume</button></a>
-          <p>Click here to view My Resume</p>
-    </div>
-
-    <!-- ======= My Project Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Projects</span>
-          <h2>Projects</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="" target="_blank">Fresh From Farm</a></h4>
-              <p class="description">A Vegetable selling web app for Farmers to reach their customers directly</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="" target="_blank">ATM-Web application</a></h4>
-              <p class="description">An ATM web application to help people access atm through their browser</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="https://github.com/sharwaridali/Data-Science" target="_blank">Data Science Mini Projects</a></h4>
-              <p class="description">Data Science Mini-Projects completed during my Internship</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="https://sharwaridali.github.io/seoul/" target="_blank">Seoul Travel Website</a></h4>
-              <p class="description">A travel website for Seoul City displaying all interesting places to visit</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End My Projects Section -->
-
-    <!-- ======= My Portfolio Section ======= 
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <span>My Portfolio</span>
-          <h2>My Portfolio</h2>
-        </div>
-        <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/Mavericks 2_page-0002.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Mavericks Logo</h4>
-              <p>KIT College Club</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/Thor Hammer.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Thor's Hammer</h4>
-              <p>3D image using Blender</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/Book_Empire.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4><a href="http://bookempire.in/" target="_blank">Book Empire</a></h4>
-              <p>A book renting online store</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/koenigsegg_page-0002.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Koenigsegg Agera</h4>
-              <p>Super Car Outline</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> End My Portfolio Section -->
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Sharwari Dali</h3>
-      <div class="social-links">
-        <a href="https://www.instagram.com/vilomaxstudio/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/sharwari-dali-2499a711a/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://mobile.twitter.com/SharuDali" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="sharwaridali26@gmail.com" class="envelope"><i class="bx bxs-envelope"></i></a>
-      </div>
-      <div class="copyright">
-      2021  &copy; Copyright <strong><span>Sharwari Dali</span></strong>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  
+    <!-- Penetration Testing Project -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-lg bg-gradient p-3 h-100">
+        <div class="card-body">
+          <h5 class="card-title">
+            <span class="badge bg-purple me-2">Security</span> Penetration Testing Toolkit
+          </h5>
+          <p class="card-text">
+            A custom-built suite of penetration testing tools and scripts for network analysis, web application scanning, and exploit automation — designed with a red-team mindset.
+          </p>
+          <a href="https://github.com/sharwaridali/penetration-testing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark">
+            🛠️ Explore Tools
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <!-- Dynamic GitHub Projects -->
+    <div id="projects-container" class="row gy-4"></div>
+  </section>
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
