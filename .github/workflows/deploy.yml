@@ -5,40 +5,36 @@ name: Deploy Static Website
 on:
   push:
     branches:
-      - main # This workflow will run whenever you push changes to the 'main' branch
+      - main
 
 jobs:
-  build-and-deploy: # This is the name of our job
-    runs-on: ubuntu-latest # This job will run on a fresh Ubuntu virtual machine
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Important: Grant write permissions for the GITHUB_TOKEN
 
     steps:
-      - name: Checkout code # Step 1: Get your code from the repository
-        uses: actions/checkout@v4 # This is a pre-built action that checks out your repo
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # If your website has a build step (e.g., uses Node.js, Hugo, Jekyll, etc.):
-      # Uncomment and adjust the following steps.
-      # If it's pure HTML/CSS/JS that doesn't need building, skip these for now.
-
-      # - name: Setup Node.js (if your project uses Node.js for building)
+      # Add your actual build steps here (uncomment and adjust as needed):
+      # - name: Setup Node.js
       #   uses: actions/setup-node@v4
       #   with:
-      #     node-version: '20' # Specify the Node.js version your project needs
+      #     node-version: '20'
+      # - name: Install dependencies
+      #   run: npm install
+      # - name: Build static website
+      #   run: npm run build # Replace with your actual build command, e.g., 'hugo', 'jekyll build', 'npx astro build'
 
-      # - name: Install dependencies (if your project uses a package manager like npm/yarn)
-      #   run: npm install # Or 'yarn install' or 'pnpm install'
+      # IMPORTANT: Ensure your build output is in a known directory.
+      # For GitHub Pages, this is often 'public', 'build', or '_site'.
+      # Let's assume your build command outputs to 'public'.
 
-      # - name: Build static website (replace with your actual build command)
-      #   run: npm run build # Or 'hugo' or 'jekyll build' or whatever command generates your static files
-
-      # This is where the deployment will go. For now, let's just create a dummy "build"
-      - name: Simulate Build
-        run: |
-          echo "Simulating website build..."
-          mkdir public # Create a directory where your built files would normally go
-          echo "<h1>Hello from GitHub Actions!</h1><p>This is a simulated deployment.</p>" > public/index.html
-          echo "Simulated build complete in 'public' directory."
-
-      # This is a placeholder for your actual deployment step
-      # We'll replace this in the next steps based on your hosting choice
-      - name: Deploy Placeholder
-        run: echo "Deployment step will go here!"
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # Use this action for deploying to gh-pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # This token is automatically provided by GitHub
+          publish_dir: ./public # This should be the directory where your built website files are located
+          publish_branch: gh-pages # Uncomment if you're deploying to a 'gh-pages' branch
+                                     # If you configured GitHub Pages to deploy from 'main' and root, you might not need this.
