@@ -1,0 +1,44 @@
+# .github/workflows/deploy.yml
+
+name: Deploy Static Website
+
+on:
+  push:
+    branches:
+      - main # This workflow will run whenever you push changes to the 'main' branch
+
+jobs:
+  build-and-deploy: # This is the name of our job
+    runs-on: ubuntu-latest # This job will run on a fresh Ubuntu virtual machine
+
+    steps:
+      - name: Checkout code # Step 1: Get your code from the repository
+        uses: actions/checkout@v4 # This is a pre-built action that checks out your repo
+
+      # If your website has a build step (e.g., uses Node.js, Hugo, Jekyll, etc.):
+      # Uncomment and adjust the following steps.
+      # If it's pure HTML/CSS/JS that doesn't need building, skip these for now.
+
+      # - name: Setup Node.js (if your project uses Node.js for building)
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20' # Specify the Node.js version your project needs
+
+      # - name: Install dependencies (if your project uses a package manager like npm/yarn)
+      #   run: npm install # Or 'yarn install' or 'pnpm install'
+
+      # - name: Build static website (replace with your actual build command)
+      #   run: npm run build # Or 'hugo' or 'jekyll build' or whatever command generates your static files
+
+      # This is where the deployment will go. For now, let's just create a dummy "build"
+      - name: Simulate Build
+        run: |
+          echo "Simulating website build..."
+          mkdir public # Create a directory where your built files would normally go
+          echo "<h1>Hello from GitHub Actions!</h1><p>This is a simulated deployment.</p>" > public/index.html
+          echo "Simulated build complete in 'public' directory."
+
+      # This is a placeholder for your actual deployment step
+      # We'll replace this in the next steps based on your hosting choice
+      - name: Deploy Placeholder
+        run: echo "Deployment step will go here!"
