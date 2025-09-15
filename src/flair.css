@@ -1,0 +1,91 @@
+:root {
+    --bs-primary: #6f42c1;
+  }
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .purple-text {
+    color: #9b59b6;
+  }
+  .hero {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+  }
+  .hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .font-great-vibes {
+    font-family: 'Great Vibes', cursive;
+  }
+  .blockquote {
+    font-style: italic;
+    color: #9b59b6;
+  }
+  
+  .blockquote-footer {
+    color: #b0b0b0;
+  }
+  
+  figure blockquote {
+    margin-bottom: 0.2rem;
+  }
+  .card {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .btn-outline-primary {
+    border-color: #9b59b6;
+    color: #9b59b6;
+    }
+
+  .btn-outline-primary:hover {
+    background-color: #9b59b6;
+    color: white;
+    }
+
+  .bg-purple {
+    background-color: #9b59b6 !important;
+    }
+
+  .badge.bg-purple {
+    color: white;
+    }
+
+  .card .btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+    }
+/* Adjustments for Special Callout Cards to adapt to both light and dark themes */
+.card.bg-gradient {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+  }
+  
+  .card .btn-outline-dark {
+    border-color: #444;
+    color: #444;
+  }
+  
+  .card .btn-outline-dark:hover {
+    background-color: #444;
+    color: white;
+  }
+  
+  /* Ensure card body adjusts in light/dark theme */
+  .card-body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+  }
